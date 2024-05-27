@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  contenedor_db:
+    image: mysql:latest
+    ports: 
+      - "3307:3306"
+    container_name: nombre-contenedor-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=Cabem0co
+    volumes:
+      - contenedor-data:/var/lib/mysql
+
+volumes:
+  contenedor-data:

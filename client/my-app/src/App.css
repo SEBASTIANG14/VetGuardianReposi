@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+body, html, #root, .App {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #F0F0F0;
+}
