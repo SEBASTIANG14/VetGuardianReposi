@@ -1,0 +1,30 @@
+/* client/src/components/Tarjeta.css */
+.Card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 20vw;
+  margin: 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.tarjeta-imagen {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tarjeta-contenido {
+  padding: 20px;
+}
+
+.boton-adoptar {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}

@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100vw;
     background: linear-gradient(180deg, #A37B9F 0%, #E2B3D4 100%);
     color: #FFF;
   }
@@ -40,12 +41,11 @@
   
   .register-content {
     background-color: #FFF;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 90%;
-    max-width: 600px;
+    height: 80vh;
+    width: 80vw;
   }
   
   .register-content h2 {
@@ -57,6 +57,7 @@
   .form-group {
     margin-bottom: 15px;
     text-align: left;
+    padding: 20px;
   }
   
   .form-group label {
@@ -66,7 +67,7 @@
   }
   
   .form-group input, .form-group select {
-    width: 100%;
+    width: 75%;
     padding: 10px;
     border: 1px solid #CCC;
     border-radius: 4px;

@@ -2,8 +2,11 @@ import React from 'react';
 import { Form, Formik } from 'formik';
 import '../../styles/signup.css'; // Importa los estilos CSS específicos del componente
 import registerUser from '../../api/register.api';
+import { useNavigate } from 'react-router-dom';
+
 
 const Register = () => {
+  const navigate = useNavigate();
   return (
     <div className="register-container">
       <header className="register-header">
@@ -27,6 +30,8 @@ const Register = () => {
           try {
             const response = await registerUser(values);
             console.log(response);
+            navigate('/Login');
+
           } catch (error) {
             console.error(error);
           }

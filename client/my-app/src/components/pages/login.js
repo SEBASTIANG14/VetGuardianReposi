@@ -8,7 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="login-container">
+    <div className="login-container"> 
       <header className="login-header">
         <h1>VetGuardian</h1>
       </header>

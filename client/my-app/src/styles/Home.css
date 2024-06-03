@@ -1,0 +1,71 @@
+/* src/Home.css */
+.home {
+    background-color: #F8BBD0; /* Fondo rosa pastel */
+  }
+  
+  .banner {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .banner-text h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .banner-text p {
+    font-size: 2rem;
+    margin: 10px 0 0 0;
+  }
+  
+  .objectives {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+  
+  .objective-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    width: 25%;
+    text-align: center;
+  }
+  
+  .objective-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .objective-text {
+    padding: 10px;
+  }
+  
+  .objective-text h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+  }
+  
+  .objective-text p {
+    text-align: justify;
+    font-size: 1rem;
+    color: #555;
+  }
+  

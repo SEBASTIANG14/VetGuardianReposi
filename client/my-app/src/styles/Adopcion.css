@@ -1,0 +1,24 @@
+/* client/src/pages/Home.css */
+.home {
+    text-align: center;
+    background-color: #1d1d1d;
+  }
+  
+  .boton-registrar {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
