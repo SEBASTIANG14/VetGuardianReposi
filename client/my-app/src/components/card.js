@@ -23,7 +23,7 @@ const Card = ({}) => {
         <p>{mascota.vacunado}</p>
         <p>{mascota.esterilizado}</p>
         <p>{mascota.descripcion}</p>
-        <button className="boton-adoptar">Adoptar</button>
+        <button className="boton-adoptar" onClick={}>Adoptar</button>
       </div>
     ))
   );
