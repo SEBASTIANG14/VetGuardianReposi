@@ -1,6 +1,11 @@
 import {pool} from '../db.js';
+import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
+
+dotenv.config();
 
 export const login = async (req, res) => {
+
     try {
         const { email, password } = req.body;
 
@@ -20,6 +25,9 @@ export const login = async (req, res) => {
             );
 
             if (rows.length > 0) {
+                const [user] = rows
+                const token = jwt.sign({ id: user.id, role: user.role }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+                res.json({ token });
                 console.log("Login exitoso");
                 res.send('Login exitoso');
             } else {
