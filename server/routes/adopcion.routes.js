@@ -4,6 +4,6 @@ import { authenticateToken } from '../middleware/auth.js';
 import { authorizeRole } from '../middleware/authorize.js';
 
 const router = express.Router();
-router.get("/mascotas",authenticateToken, authorizeRole('user'), mascotas);
+router.get("/mascotas", mascotas);
 
 export default router;

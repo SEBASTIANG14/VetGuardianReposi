@@ -5,6 +5,6 @@ import { authorizeRole } from '../middleware/authorize.js';
 
 const router = Router();
 
-router.post("/darAdopcion", authenticateToken, authorizeRole('user'), darAdopcion);
+router.post("/darAdopcion", darAdopcion);
 
 export default router;

@@ -21,7 +21,9 @@ const Login = () => {
           console.log(values);
           try {
             const response = await loginUser(values);
-            console.log(response);
+            console.log(response.data);
+            sessionStorage.setItem("id_usuario", response.data.id);
+            sessionStorage.setItem("role", response.data.role);
               navigate('/home'); // Redirigir a la página de inicio
               // Manejar caso de error en el inicio de sesión
             } catch (error) {

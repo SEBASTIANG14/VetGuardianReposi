@@ -1,7 +1,6 @@
-// client/src/components/Tarjeta.js
 import React, { useEffect, useState } from "react";
 import "../styles/Card.css"; // Crea este archivo CSS para dar estilo a la tarjeta
-import verAdopciones from "../api/adopcion.api.js";
+import { verAdopciones } from "../api/adopcion.api.js";
 
 const Card = ({}) => {
   const [mascotas, setMascotas] = useState([]);
@@ -13,20 +12,22 @@ const Card = ({}) => {
     }
     loadMascotas();
   }, []);
-  return(
-    mascotas.map((mascotas, index) => (
-    <div className="Card" key={index}>
-      <h3>{mascotas.nombre}</h3>
-      <p>{mascotas.especie}</p>
-      <p>{mascotas.edad}</p>
-      <p>{mascotas.raza}</p>
-      <p>{mascotas.vacunado}</p>
-      <p>{mascotas.esterilizado}</p>
-      <p>{mascotas.descripcion}</p>
-      <button className="boton-adoptar">Adoptar</button>
-    </div>
-  ))
-)
-}
+
+  return (
+    mascotas.map((mascota, index) => (
+      <div className="Card" key={index}>
+        <h3>{mascota.nombre}</h3>
+        <p>{mascota.especie}</p>
+        <p>{mascota.edad}</p>
+        <p>{mascota.raza}</p>
+        <p>{mascota.vacunado}</p>
+        <p>{mascota.esterilizado}</p>
+        <p>{mascota.descripcion}</p>
+        <button className="boton-adoptar">Adoptar</button>
+      </div>
+    ))
+  );
+};
 
 export default Card;
+

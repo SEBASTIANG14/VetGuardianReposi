@@ -1,13 +1,16 @@
 import {pool} from '../db.js';
-import bcrypt from 'bcrypt';
+import { createHash } from 'crypto'
 
+function hash(string) {
+  return createHash('sha256').update(string).digest('hex');
+}
 
 export const createUser = async (req, res) => {
     try {
-
-        const hashedPassword = await bcrypt.hash(password, 10);
-
+        
         const { name, lastname, email, password, phoneNumber, birthdate, hasPets} = req.body;
+
+        console.log(hash(password))
     
         console.log("Datos recibidos: ", req.body);
     
@@ -21,8 +24,9 @@ export const createUser = async (req, res) => {
         try {
             const result = await pool.query(
                 'INSERT INTO usuario (nombre, apellidos, correo, contraseña, telefono, cumpleaños, tiene_mascotas, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-                [name, lastname, email, hashedPassword, phoneNumber, birthdate, hasPets, 'user']
+                [name, lastname, email, hash(password), phoneNumber, birthdate, hasPets, 'user']
             );
+
             console.log(result);
             res.send('Usuario Registrado con exito');
         } catch (error) {

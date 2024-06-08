@@ -11,14 +11,14 @@ import { authorizeRole } from '../middleware/authorize.js';
 
 const router = Router();
 
-router.get('/mascotas', authenticateToken, authorizeRole('user'), getMascotas);
+router.get('/mascotas', getMascotas);
 
-router.get('/mascotas/:id', authenticateToken, authorizeRole('user'), getMascota);
+router.get('/mascotas/:id', getMascota);
 
-router.post('/mascotas', authenticateToken, authorizeRole('user'), createMascotas);
+router.post('/mascotas', createMascotas);
 
-router.put('/mascotas/:id', authenticateToken, authorizeRole('user'), updateMascota);
+router.put('/mascotas/:id', updateMascota);
 
-router.delete('/mascotas/:id', authenticateToken, authorizeRole('user'), deleteMascota);
+router.delete('/mascotas/:id', deleteMascota);
 
 export default router;

@@ -1,37 +1,67 @@
-// client/src/pages/Home.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/Adopcion.css";
 import { Link } from "react-router-dom";
 import Card from "../card.js";
-import Navbar from "../navbar.js"
-import Footer from "../footer.js"
+import Navbar from "../navbar.js";
+import Footer from "../footer.js";
+import { verAdopciones, adoptarMascota } from "../../api/adopcion.api.js";
 
 const Adopcion = () => {
+  const [mascotas, setMascotas] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await verAdopciones();
+      setMascotas(result.data);
+    };
+    fetchData();
+  }, []);
+
+  const handleAdoptar = async (id_usuario, id_mascota) => {
+    try {
+      await adoptarMascota(id_usuario, id_mascota);
+      alert("Mascota adoptada con éxito");
+      // Actualizar la lista de mascotas
+      const result = await verAdopciones();
+      setMascotas(result.data);
+    } catch (error) {
+      console.error("Error al adoptar la mascota", error);
+      alert("Error al adoptar la mascota");
+    }
+  };
+
   return (
     <>
-    <Navbar/>
-    <div className="home-adopcion">
-      <h1>Adopta una mascota, ¡no te arrepentirás del amor que te dan!</h1>
-      <Link to="/registroAnimal">
-        <button type="submit" className="boton-registrar-animal"> 
-          Registrar animal para dar en adopción
-        </button>
-      </Link>
-      <div className="contenedor-tarjetas-mascotasAdopcion">
-        <Card
-          nombre={Card.nombre}
-          especie={Card.especie}
-          edad={Card.edad}
-          raza={Card.raza}
-          vacunado={Card.vacunado}
-          esterilizado={Card.esterilizado}
-          descripcion={Card.descripcion}
-        />
+      <Navbar />
+      <div className="home-adopcion">
+        <h1>Adopta una mascota, ¡no te arrepentirás del amor que te dan!</h1>
+        <Link to="/registroAnimal">
+          <button type="submit" className="boton-registrar-animal">
+            Registrar animal para dar en adopción
+          </button>
+        </Link>
+        <div className="contenedor-tarjetas-mascotasAdopcion">
+          {mascotas.map((mascota) => (
+            <Card
+              key={mascota.id_mascota}
+              nombre={mascota.nombre}
+              especie={mascota.especie}
+              edad={mascota.edad}
+              raza={mascota.raza}
+              vacunado={mascota.esta_vacunado}
+              esterilizado={mascota.esta_esterilizado}
+              descripcion={mascota.descripcion}
+              foto={mascota.foto_mascota}
+              onAdoptar={() => handleAdoptar(mascota.id_mascota)} // 1 es un id_usuario de ejemplo
+            />
+          ))}
+        </div>
       </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };
 
 export default Adopcion;
+
+

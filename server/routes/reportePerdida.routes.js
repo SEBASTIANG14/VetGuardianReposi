@@ -5,6 +5,6 @@ import { authorizeRole } from '../middleware/authorize.js';
 
 const router = Router()
 
-router.post('/reportePerdida', authenticateToken, authorizeRole('user'), reportarPerdida)
+router.post('/reportePerdida', reportarPerdida)
 
 export default router;
