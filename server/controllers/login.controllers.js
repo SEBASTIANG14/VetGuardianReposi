@@ -34,3 +34,8 @@ export const login = async (req, res) => {
         return res.status(500).json({ message: error.message });
     }
 };
+
+export const getUserById = async (userId) => {
+    const [rows] = await pool.query('SELECT * FROM usuario WHERE id = ?', [id_usuario]);
+    return rows[0];
+};

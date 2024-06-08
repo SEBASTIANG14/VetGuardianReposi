@@ -1,25 +1,27 @@
-// src/Navbar.js
 import React from 'react';
 import '../styles/Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-brand">VetGuardian</div>
+      <div className="navbar-brand">
+        <Link to="/home">VetGuardian</Link>
+      </div>
       <ul className="navbar-nav">
-        <li><a href="#adoptar">Adoptar</a></li>
-        <li><a href="#reportar-maltrato">Reportar maltrato</a></li>
-        <li><a href="#agendar-vacunacion">Agendar vacunación</a></li>
-        <li><a href="#seguimiento">Seguimiento</a></li>
-        <li><a href="#reportar-perdida">Reportar pérdida</a></li>
+        <li><Link to="/mascotas">Adoptar</Link></li>
+        <li><Link to="/reporteDenuncia">Denunciar</Link></li>
+        <li><Link to="/reportePerdida">Reportar extravio</Link></li>
+        <li><Link to="/vacunacion">Vacunacion</Link></li>
+        <li><Link to="/seguimiento">Seguimiento</Link></li>
       </ul>
       <div className="navbar-profile">
-        <a href="#profile">
-          <img src="path-to-profile-icon.png" alt="Profile" />
-        </a>
+        <li><Link to="/perfil" className="profile-link">Tu Perfil</Link></li>
       </div>
     </nav>
   );
 };
 
 export default Navbar;
+
+

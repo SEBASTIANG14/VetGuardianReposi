@@ -6,19 +6,19 @@ import Footer from '../footer.js'
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home-page">
         <Navbar/>
-      <div className="banner">
-        <img src={`${process.env.PUBLIC_URL}/assets/poncho.jpg`} alt="Banner" className="banner-image" />
-        <div className="banner-text">
+      <div className="banner-home">
+        <img src={`${process.env.PUBLIC_URL}/assets/poncho.jpg`} alt="Banner" className="banner-image-home" />
+        <div className="banner-text-home">
           <h1>Bienvenido a VetGuardian</h1>
           <p>El centro de adopción más grande del país</p>
         </div>
       </div>
-      <div className="objectives">
-        <div className="objective-card">
+      <div className="objectives-home">
+        <div className="objective-card-home">
           <img src={`${process.env.PUBLIC_URL}/assets/poncho.jpg`} alt="Objective" />
-          <div className="objective-text">
+          <div className="objective-text-home">
             <h3>¿Cuál es nuestro objetivo?</h3>
             <p>
               Lograr tener un refugio donde acoger a miles de animalitos que

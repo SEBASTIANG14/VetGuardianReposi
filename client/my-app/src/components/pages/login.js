@@ -38,16 +38,16 @@ const Login = () => {
           <Form onSubmit={handleSubmit}>
             <div className="login-content">
               <h2>Inicio de sesión</h2>
-              <div className="form-group">
+              <div className="form-group-login">
                 <label htmlFor="email">Nombre usuario o correo electrónico</label>
                 <input type="email" id="email" name="email" required onChange={handleChange} />
               </div>
-              <div className="form-group">
+              <div className="form-group-login">
                 <label htmlFor="password">Contraseña</label>
                 <input type="password" id="password" name="password" required onChange={handleChange} />
               </div>
-              <div className="button-group">
-                <button type="button" className="cancel-button">Cancelar</button>
+              <div className="button-group-login">
+                <button type="button" className="cancel-button-login">Cancelar</button>
                 <button type="submit" className="login-button">Iniciar sesión</button>
               </div>
             </div>

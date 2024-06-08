@@ -6,17 +6,19 @@ import {
     updateMascota,
     deleteMascota
 } from '../controllers/mascotas.controllers.js'
+import { authenticateToken } from '../middleware/auth.js';
+import { authorizeRole } from '../middleware/authorize.js';
 
 const router = Router();
 
-router.get('/mascotas', getMascotas);
+router.get('/mascotas', authenticateToken, authorizeRole('user'), getMascotas);
 
-router.get('/mascotas/:id', getMascota);
+router.get('/mascotas/:id', authenticateToken, authorizeRole('user'), getMascota);
 
-router.post('/mascotas', createMascotas);
+router.post('/mascotas', authenticateToken, authorizeRole('user'), createMascotas);
 
-router.put('/mascotas/:id', updateMascota);
+router.put('/mascotas/:id', authenticateToken, authorizeRole('user'), updateMascota);
 
-router.delete('/mascotas/:id', deleteMascota);
+router.delete('/mascotas/:id', authenticateToken, authorizeRole('user'), deleteMascota);
 
 export default router;

@@ -1,0 +1,69 @@
+.report-container-perdida {
+    background: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .report-container-perdida h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .form-group-perdida {
+    margin-bottom: 15px;
+  }
+  
+  .form-group-perdida label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group-perdida input[type="text"], 
+  .form-group-perdida textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .form-group-perdida textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  .button-group-perdida {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cancel-button-perdida, 
+  .report-button-perdida {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cancel-button-perdida {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .report-button-perdida {
+    background-color: #6200ea;
+    color: #fff;
+  }
+  
+  .cancel-button-perdida:hover,
+  .report-button-perdida:hover {
+    opacity: 0.8;
+  }
+  

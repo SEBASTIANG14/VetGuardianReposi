@@ -1,10 +1,10 @@
 /* client/src/pages/Home.css */
-.home {
+.home-adopcion {
     text-align: center;
-    background-color: #1d1d1d;
+    background-color: #ffffff;
   }
   
-  .boton-registrar {
+  .boton-registrar-animal {
     margin: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -15,7 +15,7 @@
     cursor: pointer;
   }
   
-  .contenedor-tarjetas {
+  .contenedor-tarjetas-mascotasAdopcion {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

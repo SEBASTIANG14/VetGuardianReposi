@@ -7,6 +7,8 @@ import usersRoutes from "./routes/users.routes.js";
 import login from "./routes/login.routes.js";
 import adoptar from "./routes/adopcion.routes.js";
 import darAdopcion from "./routes/darAdopcion.routes.js";
+import reportarDenuncia from "./routes/reporteDenuncia.routes.js";
+import reportarPerdida from "./routes/reportePerdida.routes.js"
 
 const app = express();
 
@@ -18,5 +20,7 @@ app.use(usersRoutes);
 app.use(login);
 app.use(adoptar);
 app.use(darAdopcion);
+app.use(reportarDenuncia)
+app.use(reportarPerdida)
 app.listen(PORT);
 console.log(`Server is listening on port ${PORT}`);
