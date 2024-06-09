@@ -2,7 +2,7 @@ import {pool} from '../db.js';
 
 export const reportarPerdida = async (req, res) => {
     try {
-        const { nombre_mascota, especie_mascota, raza_mascota, descripcion_mascota, ubicacion_perdida, fecha_perdida, recompensa} = req.body;
+        const { id_usuario,nombre_mascota, especie_mascota, raza_mascota, descripcion_mascota, ubicacion_perdida, fecha_perdida, recompensa} = req.body;
     
         console.log("Datos recibidos: ", req.body);
     
@@ -15,8 +15,8 @@ export const reportarPerdida = async (req, res) => {
     
         try {
             const result = await pool.query(
-                'INSERT INTO reporte_perdida (nombre_mascota, especie_mascota, raza_mascota, descripcion_mascota, ubicacion_perdida, fecha_perdida, recompensa) VALUES (?, ?, ?, ?, ?, ?, ?)',
-                [nombre_mascota, especie_mascota, raza_mascota, descripcion_mascota, ubicacion_perdida, fecha_perdida, recompensa]
+                'INSERT INTO reporte_perdida (id_usuario,nombre_mascota, especie_mascota, raza_mascota, descripcion_mascota, ubicacion_perdida, fecha_perdida, recompensa) VALUES (?,?, ?, ?, ?, ?, ?, ?)',
+                [id_usuario,nombre_mascota, especie_mascota, raza_mascota, descripcion_mascota, ubicacion_perdida, fecha_perdida, recompensa]
             );
             console.log(result);
             res.send('Reporte de perdida registrado con exito');

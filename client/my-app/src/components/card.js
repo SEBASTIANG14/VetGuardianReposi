@@ -1,32 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../styles/Card.css"; // Crea este archivo CSS para dar estilo a la tarjeta
-import { verAdopciones } from "../api/adopcion.api.js";
 
-const Card = ({}) => {
-  const [mascotas, setMascotas] = useState([]);
-
-  useEffect(() => {
-    async function loadMascotas() {
-      const response = await verAdopciones();
-      setMascotas(response.data);
-    }
-    loadMascotas();
-  }, []);
-
-  return (
-    mascotas.map((mascota, index) => (
-      <div className="Card" key={index}>
-        <h3>{mascota.nombre}</h3>
-        <p>{mascota.especie}</p>
-        <p>{mascota.edad}</p>
-        <p>{mascota.raza}</p>
-        <p>{mascota.vacunado}</p>
-        <p>{mascota.esterilizado}</p>
-        <p>{mascota.descripcion}</p>
-        <button className="boton-adoptar" onClick={}>Adoptar</button>
-      </div>
-    ))
-  );
+const Card = (props) => {
+ const { nombre, especie, edad, raza, vacunado, esterilizado, descripcion, foto, adoptHandler, id_mascota } = props
+ return (
+  <div className="Card">
+   <h3>{nombre}</h3>
+   <p>{especie}</p>
+   <p>{edad}</p>
+   <p>{raza}</p>
+   <p>{vacunado}</p>
+   <p>{esterilizado}</p>
+   <p>{descripcion}</p>
+   <button className="boton-adoptar" onClick={adoptHandler}>Adoptar</button>
+  </div>
+ );
 };
 
 export default Card;

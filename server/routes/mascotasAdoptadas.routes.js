@@ -1,5 +1,5 @@
 import express from "express";
-import { adoptarMascota } from "../controllers/mascotasAdoptadas.controllers.js";
+import { adoptarMascota,  } from "../controllers/mascotasAdoptadas.controllers.js";
 
 const router = express.Router();
 

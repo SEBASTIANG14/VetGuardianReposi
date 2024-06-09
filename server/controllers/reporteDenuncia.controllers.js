@@ -2,7 +2,7 @@ import {pool} from '../db.js';
 
 export const reportarDenuncia = async (req, res) => {
     try {
-        const { fecha_reporte, especie_animal, descripcion_hechos, descripcion_animal, direccion} = req.body;
+        const { id_usuario,fecha_reporte, especie_animal, descripcion_hechos, descripcion_animal, direccion} = req.body;
     
         console.log("Datos recibidos: ", req.body);
     
@@ -15,8 +15,8 @@ export const reportarDenuncia = async (req, res) => {
     
         try {
             const result = await pool.query(
-                'INSERT INTO reporte_denuncia (fecha_reporte, especie_animal, descripcion_hechos, descripcion_animal, direccion) VALUES (?, ?, ?, ?, ?)',
-                [fecha_reporte, especie_animal, descripcion_hechos, descripcion_animal, direccion]
+                'INSERT INTO reporte_denuncia (id_usuario,fecha_reporte, especie_animal, descripcion_hechos, descripcion_animal, direccion) VALUES (?,?, ?, ?, ?, ?)',
+                [id_usuario,fecha_reporte, especie_animal, descripcion_hechos, descripcion_animal, direccion]
             );
             console.log(result);
             res.send('Reporte levantado con exito');
