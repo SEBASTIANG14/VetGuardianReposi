@@ -14,5 +14,13 @@ const getUserInfo= async (id_usuario) => {
 });
 };
 
+const getUserProfile= async (id_usuario) => {
+  await axios.get("http://localhost:4000/adoptar", {
+  params: {
+    id_usuario: id_usuario,
+  }
+});
+};
+
 
 export { verAdopciones, adoptarMascota };
