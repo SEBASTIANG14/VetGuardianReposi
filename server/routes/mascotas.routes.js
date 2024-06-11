@@ -6,7 +6,7 @@ import {
  updateMascota,
  deleteMascota
 } from '../controllers/mascotas.controllers.js'
-import { getTest, getUserStuff } from '../controllers/user.controller.js';
+import { getTest, getUserStuff, getUserProfile } from '../controllers/user.controller.js';
 
 const router = Router();
 
@@ -17,6 +17,8 @@ router.get('/mascotas', getMascotas);
 router.get('/test', getTest);
 
 router.get('/seguimiento/:id', getUserStuff);
+
+router.get('/perfil/:id', getUserProfile);
 
 router.get('/mascotas/:id', getMascota);
 

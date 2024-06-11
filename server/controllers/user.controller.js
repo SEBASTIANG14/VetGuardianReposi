@@ -12,6 +12,14 @@ export const getUserStuff = async (req, res) => {
  return res.json({adoptions, reports, losts})
 }
 
+export const getUserProfile= async (req, res) => {
+ let { id } = req.params
+
+ const [profile] = await pool.query(`SELECT * FROM usuario where id_usuario = ${id}`)
+
+ return res.json({profile})
+}
+
 export const getTest = async (req, res) => {
  console.log("wep")
  console.log(req)

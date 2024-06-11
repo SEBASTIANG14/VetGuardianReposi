@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../styles/reporteDenuncia.css';
 import { Form, Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import Denuncia from '../../api/reporteDenuncia.api.js';
 import Navbar from '../navbar.js';
 import Footer from '../footer.js';
+import { getUserSession } from "../../functions/userSession";
 
 const HacerDenuncia = () => {
- const navigate = useNavigate();
- const user = JSON.parse(sessionStorage.getItem("id_usuario"))
+ const navigate = useNavigate()
+ const user = getUserSession()
+ useEffect(() => {
+  if (user === null) {
+   navigate("/login")
+  }
+ }, []);
  return (
   <div className='denuncia-container'>
    <Navbar />

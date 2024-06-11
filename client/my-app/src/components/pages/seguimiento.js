@@ -2,12 +2,17 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../navbar.js';
 import Footer from '../footer.js';
 import getUser from '../../api/seguimiento.api.js';
+import { useNavigate } from 'react-router-dom';
+import { getUserSession } from "../../functions/userSession";
 
 const Seguimiento = () => {
- const user = (sessionStorage.getItem("id_usuario"))  
- if (user === null) {
-  // usa el navigate para enviar a /register o /login
- }
+ const navigate = useNavigate()
+ const user = getUserSession()
+ useEffect(() => {
+  if (user === null) {
+   navigate("/login")
+  }
+ }, []);
 
  const [adoptionsUser, setAdoptions] = useState([])
  const [lostsUser, setLosts] = useState([])

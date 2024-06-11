@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/Adopcion.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Card from "../card.js";
 import Navbar from "../navbar.js";
 import Footer from "../footer.js";
 import { verAdopciones, adoptarMascota } from "../../api/adopcion.api.js";
+import { getUserSession } from "../../functions/userSession";
 
 const Adopcion = () => {
- const user = parseInt(sessionStorage.getItem("id_usuario"))
+ const navigate = useNavigate()
+ const user = getUserSession()
+ useEffect(() => {
+  if (user === null) {
+   navigate("/login")
+  }
+ }, []);
  const [mascotas, setMascotas] = useState([]);
+
 
  useEffect(() => {
   const fetchData = async () => {

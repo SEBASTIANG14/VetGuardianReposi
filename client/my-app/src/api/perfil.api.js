@@ -8,4 +8,4 @@ const getUserProfile = async (id) => {
  return response.json()
 }
 
-export default getUser;
+export default getUserProfile;

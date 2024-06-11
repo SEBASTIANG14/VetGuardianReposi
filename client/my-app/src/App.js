@@ -10,6 +10,7 @@ import Perdida from "./components/pages/reportePerdida.js";
 import RegistrarAnimal from "./components/pages/darAdopcion.js"
 import Seguimiento from "./components/pages/seguimiento.js";
 import Vacunacion from "./components/pages/vacunacion.js";
+import Perfil from "./components/pages/perfil";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path="/reportePerdida" element={<Perdida />} />
       <Route path="/seguimiento" element={<Seguimiento/>} />
       <Route path="/vacunacion" element={<Vacunacion/>} />
+      <Route path="/perfil" element={<Perfil/>} />
     </Routes>
   );
 }

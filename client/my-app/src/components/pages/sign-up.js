@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
-  const navigate = useNavigate();
+ const navigate = useNavigate()
   return (
     <div className="register-container">
       <header className="register-header">
