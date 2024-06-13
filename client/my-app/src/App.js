@@ -18,6 +18,7 @@ function App() {
     <Routes>
       <Route path="/ramses" element={<Ramses/>} />
       <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Home />} />
       <Route path="/register" element={<Register />} />
       <Route path="/home" element={<Home />} />
       <Route path="/mascotas" element={<Adopcion />} />
