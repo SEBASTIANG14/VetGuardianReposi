@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../navbar.js';
 import Footer from '../footer.js';
+import '../../styles/Profile.css';
 import getUserProfile from '../../api/perfil.api.js';
 import { getUserSession } from '../../functions/userSession.js';
 import { useNavigate } from 'react-router-dom';
+import CustomField from '../field.js';
 
 const Perfil = () => {
  const navigate = useNavigate()
@@ -23,25 +25,28 @@ const Perfil = () => {
   fetchData();
  }, []);
 
+
+ let newDate
+
+ if (userProfile["cumpleaños"] !== undefined) {
+  newDate = userProfile["cumpleaños"].split("T")[0]
+ }
+
  return (
   <>
    <Navbar />
-   <div className='perfil'>
+   <main className='profile'>
+    <h1>Perfil de usuario</h1>
     <div className='personal-info'>
-     <h1>Nombres </h1>
-     <h1>{userProfile["nombre"]}</h1>
-     <h1>Apellidos</h1>
-     <h1>{userProfile["apellidos"]}</h1>
+     <CustomField fieldTitle={"Nombres"} fieldContent={userProfile["nombre"]} />
+     <CustomField fieldTitle={"Apellidos"} fieldContent={userProfile["apellidos"]} />
     </div>
     <div className='email-info'>
-     <h1>Correo electrónico</h1>
-     <h1>{userProfile["correo"]}</h1>
-     <h1>Número telefónico</h1>
-     <h1>{userProfile["telefono"]}</h1>
-     <h1>Fecha de cumpleaños</h1>
-     <h1>{userProfile["cumpleaños"]}</h1>
+     <CustomField fieldTitle={"Correo electrónico"} fieldContent={userProfile["correo"]} />
+     <CustomField fieldTitle={"Número telefónico"} fieldContent={userProfile["telefono"]} />
+     <CustomField fieldTitle={"Fecha de cumpleaños"} fieldContent={newDate} />
     </div>
-   </div>
+   </main>
    <Footer />
   </>
  )

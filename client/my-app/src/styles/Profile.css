@@ -1,0 +1,21 @@
+.profile {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-content: center;
+ background-color: whitesmoke;
+}
+.profile *{
+ margin: 0;
+ border-radius: 5px;
+}
+.field-container{
+ border-radius: 5px;
+ padding: 25px;
+ background-color: white;
+ display: flex;
+ align-items: center;
+ margin: 2%;
+ width: 30vw;
+}
+

@@ -11,10 +11,12 @@ import RegistrarAnimal from "./components/pages/darAdopcion.js"
 import Seguimiento from "./components/pages/seguimiento.js";
 import Vacunacion from "./components/pages/vacunacion.js";
 import Perfil from "./components/pages/perfil";
+import Ramses from "./components/pages/ramses";
 
 function App() {
   return (
     <Routes>
+      <Route path="/ramses" element={<Ramses/>} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/home" element={<Home />} />
