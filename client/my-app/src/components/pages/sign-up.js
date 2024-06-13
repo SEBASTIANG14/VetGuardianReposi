@@ -11,9 +11,6 @@ const Register = () => {
     <div className="register-container">
       <header className="register-header">
         <h1>VetGuardian</h1>
-        <button className="veterinarian-register-button">
-          Registrarse como Veterinario
-        </button>
       </header>
       <Formik
         initialValues={{
