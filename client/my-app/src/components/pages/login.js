@@ -10,6 +10,7 @@ const Login = () => {
     <div className="login-container"> 
       <header className="login-header">
         <h1>VetGuardian</h1>
+        <h1><Link to="/register">Registrarse</Link></h1>
       </header>
       <Formik
         initialValues={{
