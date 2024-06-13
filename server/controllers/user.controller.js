@@ -9,6 +9,12 @@ export const getUserStuff = async (req, res) => {
 
  const [losts] = await pool.query(`SELECT * FROM reporte_perdida where id_usuario = ${id}`)
 
+  adoptions.forEach(pet => {
+   if (pet.imagen) {
+    pet.imagen = pet.imagen.toString('base64')
+   }
+  });
+
  return res.json({adoptions, reports, losts})
 }
 

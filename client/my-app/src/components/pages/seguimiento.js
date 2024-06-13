@@ -4,7 +4,7 @@ import Footer from '../footer.js';
 import getUser from '../../api/seguimiento.api.js';
 import { useNavigate } from 'react-router-dom';
 import { getUserSession } from "../../functions/userSession";
-
+import '../../styles/seguimiento.css';
 const Seguimiento = () => {
  const navigate = useNavigate()
  const user = getUserSession()
@@ -28,27 +28,75 @@ const Seguimiento = () => {
   fetchData();
  }, []);
 
-
  return (
   <>
    <Navbar />
    <div className='seguimiento'>
-    <h1>adopciones</h1>
+    <h1>Mis Adopciones</h1>
     {adoptionsUser.map((pet) => (
-     <h1>{pet.nombre_mascota_adoptada}</h1>
+     <div>
+      <span>Nombre de la mascota: </span>
+      <span>{pet.nombre_mascota_adoptada}</span>
+      <br/>
+      <span>Especie: </span>
+      <span>{pet.especie_mascota_adoptada}</span>
+      <br/>
+      <span>Raza: </span>
+      <span>{pet.raza_mascota_adoptada}</span>
+      <br/>
+      <span>Edad: </span>
+      <span>{pet.edad_mascota_adoptada}</span>
+      <br/>
+      <img style={{maxWidth:"300px", maxHeight:"300px"}} src={base64(pet.imagen)} alt="" />
+     </div>
     ))}
-    <h1>perdidas</h1>
+    <h1>Mis Mascotas Perdidas</h1>
     {lostsUser.map((pet) => (
-     <h1>{pet.descripcion_mascota}</h1>
+     <div>
+      <span>Descripción mascota: </span>
+      <span>{pet.descripcion_mascota}</span>
+      <br/>
+      <span>Especie: </span>
+      <span>{pet.especie_mascota}</span>
+      <br/>
+      <span>Raza: </span>
+      <span>{pet.raza_mascota}</span>
+      <br/>
+      <span>Fecha perdida: </span>
+      <span>{pet.fecha_perdida}</span>
+      <br/>
+      <span>Recompensa: </span>
+      <span>{pet.fecha_perdida}</span>
+     </div>
+
     ))}
-    <h1>reportes</h1>
+    <h1>Reportes</h1>
     {reportsUser.map((pet) => (
-     <h1>{pet.descripcion_animal}</h1>
+     <div>
+     <span>Descripción del animal: </span>
+     <span>{pet.descripcion_animal}</span>
+      <br/>
+     <span>Fecha del reporte: </span>
+     <span>{pet.fecha_reporte}</span>
+      <br/>
+     <span>Descripción hechos: </span>
+     <span>{pet.fecha_reporte}</span>
+      <br/>
+     <span>Descripción animal: </span>
+     <span>{pet.descripcion_animal}</span>
+      <br/>
+     <span>Dirección: </span>
+     <span>{pet.direccion}</span>
+     </div>
     ))}
    </div>
    <Footer />
   </>
  )
+}
+
+function base64(image) {
+ return `data:image/jpeg;base64,${image}`
 }
 
 export default Seguimiento;

@@ -11,7 +11,6 @@ const Navbar = () => {
     <Link to="/home">VetGuardian</Link>
    </div>
    <ul className="navbar-nav">
-    <li><Link to="/ramses">ramses</Link></li>
     <li><Link to="/mascotas">Adoptar</Link></li>
     <li><Link to="/reporteDenuncia">Denunciar</Link></li>
     <li><Link to="/reportePerdida">Reportar extravio</Link></li>

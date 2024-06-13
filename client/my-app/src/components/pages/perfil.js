@@ -6,7 +6,7 @@ import getUserProfile from '../../api/perfil.api.js';
 import { getUserSession } from '../../functions/userSession.js';
 import { useNavigate } from 'react-router-dom';
 import CustomField from '../field.js';
-
+import '../../styles/perfil.css';
 const Perfil = () => {
  const navigate = useNavigate()
  const user = getUserSession()

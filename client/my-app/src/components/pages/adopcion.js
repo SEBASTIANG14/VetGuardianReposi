@@ -17,7 +17,6 @@ const Adopcion = () => {
  }, []);
  const [mascotas, setMascotas] = useState([]);
 
-
  useEffect(() => {
   const fetchData = async () => {
    const result = await verAdopciones();
@@ -61,7 +60,7 @@ const Adopcion = () => {
        vacunado={mascota.esta_vacunado}
        esterilizado={mascota.esta_esterilizado}
        descripcion={mascota.descripcion}
-       foto={mascota.foto_mascota}
+       foto={mascota.imagen}
        adoptHandler={() => handleAdoptar(user, mascota.id_mascota)} // 1 es un id_usuario de ejemplo
       />
      ))}
@@ -72,6 +71,6 @@ const Adopcion = () => {
  );
 };
 
-export default Adopcion;
 
+export default Adopcion;
 

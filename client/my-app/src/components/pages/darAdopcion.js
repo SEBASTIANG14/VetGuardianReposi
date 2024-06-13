@@ -40,8 +40,8 @@ const RegistrarAnimal = () => {
       for (const key in form) {
        formData.append(key, form[key])
       }
-      const response = await darAdopcion(formData);
-      console.log(response);
+      await darAdopcion(formData);
+      navigate("/mascotas")
      } catch (error) {
       console.error(error);
      }

@@ -39,7 +39,7 @@ router.post("/darAdopcion", upload.single('foto_mascota'), async (req, res) => {
      esta_esterilizado,
      esta_vacunado,
      descripcion,
-     "asdf",
+     "transrights",
      foto_mascota,
     ]
    );
@@ -52,6 +52,7 @@ router.post("/darAdopcion", upload.single('foto_mascota'), async (req, res) => {
   return res.status(500).json({ message: error.message });
  }
 });
+
 router.post('/api/registro_usuario', upload.single('fotoPerfil'), async (req, res) => {
  const { nombre, apellido, email, contrasena, telefono, fechaNacimiento, genero } = req.body;
  const fotoPerfil = req.file ? req.file.buffer : null;
