@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../styles/Login.css'; // Importa los estilos CSS específicos del componente
 import loginUser from '../../api/login.api';
 
