@@ -14,22 +14,22 @@ import Perfil from "./components/pages/perfil";
 import Ramses from "./components/pages/ramses";
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/ramses" element={<Ramses/>} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/mascotas" element={<Adopcion />} />
-      <Route path="/registroAnimal" element={<RegistrarAnimal/>}/>
-      <Route path="/reporteDenuncia" element={<Denuncia />} />
-      <Route path="/reportePerdida" element={<Perdida />} />
-      <Route path="/seguimiento" element={<Seguimiento/>} />
-      <Route path="/vacunacion" element={<Vacunacion/>} />
-      <Route path="/perfil" element={<Perfil/>} />
-    </Routes>
-  );
+ return (
+  <Routes>
+   <Route path="/ramses" element={<Ramses />} />
+   <Route path="/login" element={<Login />} />
+   <Route path="/" element={<Home />} />
+   <Route path="/register" element={<Register />} />
+   <Route path="/home" element={<Home />} />
+   <Route path="/mascotas" element={<Adopcion />} />
+   <Route path="/registroAnimal" element={<RegistrarAnimal />} />
+   <Route path="/reporteDenuncia" element={<Denuncia />} />
+   <Route path="/reportePerdida" element={<Perdida />} />
+   <Route path="/seguimiento" element={<Seguimiento />} />
+   <Route path="/vacunacion" element={<Vacunacion />} />
+   <Route path="/perfil" element={<Perfil />} />
+  </Routes>
+ );
 }
 
 export default App;
