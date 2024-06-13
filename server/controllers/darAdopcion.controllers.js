@@ -10,28 +10,13 @@ export const darAdopcion = async (req, res) => {
    esta_esterilizado,
    esta_vacunado,
    descripcion,
-   foto_mascota,
   } = req.body;
 
+  const foto = req.file ? req.file.buffer : null;
   console.log("Datos recibidos: ", req.body);
 
-  // Verificación de que todos los campos están presentes y no son nulos o vacíos
-  if (
-   !nombre ||
-   !edad ||
-   !especie ||
-   !raza ||
-   !esta_esterilizado ||
-   !esta_vacunado ||
-   !descripcion ||
-   !foto_mascota
-  ) {
-   console.log("Faltan campos obligatorios");
-   return res.status(400).send("Faltan campos obligatorios");
-  }
-
   try {
-   const result = await pool.query(
+   await pool.query(
     "INSERT INTO mascotas (nombre, edad, especie, raza, esta_esterilizado, esta_vacunado, descripcion, foto_mascota) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
     [
      nombre,
@@ -41,10 +26,9 @@ export const darAdopcion = async (req, res) => {
      esta_esterilizado,
      esta_vacunado,
      descripcion,
-     foto_mascota,
+     foto,
     ]
    );
-   console.log(result);
    res.send("Mascota Registrada con éxito");
   } catch (error) {
    console.error(error);
@@ -100,3 +84,18 @@ export const adoptar = async (req, res) => {
   return res.status(500).json({ message: error.message });
  }
 };
+
+  // // Verificación de que todos los campos están presentes y no son nulos o vacíos
+  // if (
+  //  !nombre ||
+  //  !edad ||
+  //  !especie ||
+  //  !raza ||
+  //  !esta_esterilizado ||
+  //  !esta_vacunado ||
+  //  !descripcion 
+  // ) {
+  //  console.log("Faltan campos obligatorios");
+  //  return res.status(400).send("Faltan campos obligatorios");
+  // }
+  // console.log(foto_mascota)

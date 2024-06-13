@@ -5,6 +5,7 @@ const Card = (props) => {
  const { nombre, especie, edad, raza, vacunado, esterilizado, descripcion, foto, adoptHandler, id_mascota } = props
  return (
   <div className="Card">
+   <img style={{ maxWidth: "300px", maxHeight: "150px" }} src={base64(foto)} alt="" />
    <h3>{nombre}</h3>
    <p>{especie}</p>
    <p>{edad}</p>
@@ -16,6 +17,10 @@ const Card = (props) => {
   </div>
  );
 };
+
+function base64(image) {
+ return `data:image/jpeg;base64,${image}`
+}
 
 export default Card;
 

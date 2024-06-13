@@ -3,6 +3,11 @@ import { pool } from '../db.js';
 export const getMascotas = async (req, res) => {
  try {
   const [result] = await pool.query("SELECT * FROM mascotas where is_adopted = 0")
+  result.forEach(pet => {
+   if (pet.imagen) {
+    pet.imagen = pet.imagen.toString('base64')
+   }
+  });
   res.json(result)
  } catch (error) {
   return res.status(500).json({ message: error.message })

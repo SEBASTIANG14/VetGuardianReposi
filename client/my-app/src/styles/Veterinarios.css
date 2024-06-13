@@ -1,0 +1,50 @@
+.container {
+  font-family: 'Arial, sans-serif';
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.box {
+  background-color: #d8a3e6;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.vet {
+  margin-bottom: 20px;
+}
+
+.vet p {
+  margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .vet p {
+    font-size: 0.9em;
+  }
+}

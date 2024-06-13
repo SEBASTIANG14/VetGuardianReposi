@@ -5,8 +5,7 @@ import '../../styles/Login.css'; // Importa los estilos CSS específicos del com
 import loginUser from '../../api/login.api';
 
 const Login = () => {
-  const navigate = useNavigate();
-
+ const navigate = useNavigate()
   return (
     <div className="login-container"> 
       <header className="login-header">

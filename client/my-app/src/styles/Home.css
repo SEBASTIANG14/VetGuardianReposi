@@ -1,71 +1,76 @@
-/* src/Home.css */
 .home-page {
-    background-color: #F8BBD0; /* Fondo rosa pastel */
-  }
-  
-  .banner-home {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  
-  .banner-image-home {
-    width: 100%;
-    height: auto;
-    opacity: 0.8;
-  }
-  
-  .banner-text-home {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .banner-text-home h1 {
-    font-size: 5rem;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .banner-text-home p {
-    font-size: 2rem;
-    margin: 10px 0 0 0;
-  }
-  
-  .objectives-home {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    margin-bottom: 80px;
-  }
-  
-  .objective-card-home {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    overflow: hidden;
-    width: 25%;
-    text-align: center;
-  }
-  
-  .objective-card-home img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .objective-text-home {
-    padding: 10px;
-  }
-  
-  .objective-text-home h3 {
-    font-size: 1.25rem;
-    margin: 10px 0;
-  }
-  
-  .objective-text-home p {
-    text-align: justify;
-    font-size: 1rem;
-    color: #555;
-  }
-  
+  background-color: #f8bbd0;
+}
+.banner-home {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner-image-home {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.banner-text-home {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-text-home h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.banner-text-home p {
+  font-size: 2rem;
+  margin: 10px 0 0 0;
+}
+
+.conocenos h1 {
+  color: white;
+  text-shadow: #555;
+  margin-left: 60px;
+  font-size: 2rem;
+}
+
+.objectives-home {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.objective-card-home {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 25%;
+  text-align: center;
+}
+
+.objective-card-home img {
+  width: 100%;
+  height: auto;
+}
+
+.objective-text-home {
+  padding: 10px;
+}
+
+.objective-text-home h3 {
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+
+.objective-text-home p {
+  text-align: justify;
+  font-size: 1rem;
+  color: #555;
+}
+

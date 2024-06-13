@@ -1,0 +1,12 @@
+.seguimiento {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.seguimiento span {
+ font-size: 27px;
+}
+.seguimiento h1 {
+ text-align: left;
+}

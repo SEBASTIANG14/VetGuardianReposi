@@ -6,14 +6,11 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
-  const navigate = useNavigate();
+ const navigate = useNavigate()
   return (
     <div className="register-container">
       <header className="register-header">
         <h1>VetGuardian</h1>
-        <button className="veterinarian-register-button">
-          Registrarse como Veterinario
-        </button>
       </header>
       <Formik
         initialValues={{

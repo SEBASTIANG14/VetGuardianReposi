@@ -14,12 +14,13 @@ export const adoptarMascota = async (req, res) => {
    nombre,
    edad,
    especie,
-   raza
+   raza,
+   imagen
   } = mascota[0];
 
   await pool.query(
-   "INSERT INTO adopciones (id_usuario, id_mascota, nombre_mascota_adoptada, especie_mascota_adoptada, raza_mascota_adoptada, edad_mascota_adoptada) VALUES (?, ?, ?, ?, ?, ?)",
-   [id_usuario, id_mascota, nombre, especie, raza, edad]
+   "INSERT INTO adopciones (id_usuario, id_mascota, nombre_mascota_adoptada, especie_mascota_adoptada, raza_mascota_adoptada, edad_mascota_adoptada, imagen) VALUES (?, ?, ?, ?, ?, ?, ?)",
+   [id_usuario, id_mascota, nombre, especie, raza, edad, imagen]
   );
 
   try {

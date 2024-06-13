@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../styles/reportePerdida.css';
 import { Form, Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import Perdida from '../../api/reportePerdida.api.js';
 import Navbar from '../navbar.js';
 import Footer from '../footer.js'
+import { getUserSession } from "../../functions/userSession";
 
 const ReportarPerdida = () => {
- const navigate = useNavigate();
- const user = JSON.parse(sessionStorage.getItem("id_usuario"))
+ const navigate = useNavigate()
+ const user = getUserSession()
+ useEffect(() => {
+  if (user === null) {
+   navigate("/login")
+  }
+ }, []);
  return (
 
   <>
