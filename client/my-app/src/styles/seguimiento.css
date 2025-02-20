@@ -1,12 +1,130 @@
-.seguimiento {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
-}
-.seguimiento span {
- font-size: 27px;
-}
-.seguimiento h1 {
- text-align: left;
-}
+/* Fondo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../../public/assets/poncho.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover;
+  }
+  
+  /* Contenedor principal del seguimiento */
+  .seguimiento-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Secciones individuales (Adopciones, Perdidas, Reportes) */
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  /* Título de cada sección */
+  .section h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Contenedor de cada mascota/reportado */
+  .pet-item {
+    background: #f1f1f1; /* Color de fondo de cada elemento */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título de cada mascota/reportado */
+  .pet-item h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #555;
+  }
+  
+  /* Fondo del contenedor principal para el formulario */
+  .report-container-perdida {
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin-top: 50px; /* Ajusta este valor para más margen superior */
+    margin-bottom: 50px; /* Agrega un margen inferior para separación */
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+  }
+  
+  /* Título del formulario */
+  .report-container-perdida h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Grupo de formulario (inputs y textareas) */
+  .form-group-perdida {
+    margin-bottom: 15px;
+  }
+  
+  /* Etiquetas de los inputs */
+  .form-group-perdida label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Inputs y textareas */
+  .form-group-perdida input[type="text"], 
+  .form-group-perdida textarea {
+    width: 100%; /* Ajuste del ancho para mejor alineación */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Textarea sin redimensionar y con altura fija */
+  .form-group-perdida textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  /* Contenedor de los botones */
+  .button-group-perdida {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Botones de cancelar y reportar */
+  .cancel-button-perdida, 
+  .report-button-perdida {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Botón de cancelar */
+  .cancel-button-perdida {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Botón de reportar */
+  .report-button-perdida {
+    background-color: #6200ea;
+    color: #fff;
+  }
+  
+  /* Hover para los botones */
+  .cancel-button-perdida:hover,
+  .report-button-perdida:hover {
+    opacity: 0.8;
+  }
+  
