@@ -4,7 +4,7 @@ import Footer from '../footer.js';
 import getUser from '../../api/seguimiento.api.js';
 import { useNavigate } from 'react-router-dom';
 import { getUserSession } from "../../functions/userSession";
-import '../../styles/seguimiento.css';
+import '../../styles/Seguimiento.css';
 const Seguimiento = () => {
  const navigate = useNavigate()
  const user = getUserSession()
@@ -100,3 +100,4 @@ function base64(image) {
 }
 
 export default Seguimiento;
+ 
