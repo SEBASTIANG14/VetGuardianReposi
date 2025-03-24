@@ -28,6 +28,6 @@ export const getUserProfile= async (req, res) => {
 
 export const getTest = async (req, res) => {
  console.log("wep")
- console.log(req)
+ console.log(req) 
  return res.json({asdf:"asdf"})
 }

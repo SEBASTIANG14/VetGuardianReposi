@@ -4,7 +4,7 @@ const getUser = async (id) => {
   method: "GET",
   redirect: "follow"
  };
- const response = await fetch(`http://api.sebasolivas.com/seguimiento/${id}`, requestOptions)
+ const response = await fetch(`http://localhost:4000/seguimiento/${id}`, requestOptions)
 
  return response.json()
 }

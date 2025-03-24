@@ -26,6 +26,6 @@ router.post('/mascotas', createMascotas);
 
 router.put('/mascotas/:id', updateMascota);
 
-router.delete('/mascotas/:id', deleteMascota); // quitaloa lverg
+router.delete('/mascotas/:id', deleteMascota);
 
 export default router;

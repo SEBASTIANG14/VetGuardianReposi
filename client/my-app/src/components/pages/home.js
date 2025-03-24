@@ -13,7 +13,7 @@ const Home = () => {
   if (user === null) {
    navigate("/login")
   }
- }, []);
+ }, [user, navigate]);
 
  return (
 <div className="home-page">

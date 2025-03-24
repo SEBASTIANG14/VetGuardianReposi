@@ -3,7 +3,7 @@ const getUserProfile = async (id) => {
   method: "GET",
   redirect: "follow"
  };
- const response = await fetch(`http://api.sebasolivas.com/perfil/${id}`, requestOptions)
+ const response = await fetch(`http://localhost:4000/perfil/${id}`, requestOptions)
 
  return response.json()
 }

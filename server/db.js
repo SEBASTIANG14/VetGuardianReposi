@@ -3,8 +3,8 @@ import {createPool} from 'mysql2/promise';
 export const pool = new createPool({
     host: 'localhost',
     port: 3306,
-    user: 'happy',
-    password: 'asdf', 
+    user: 'root',
+    password: '', 
     database: 'VetGuardiansDB'
 });
 
@@ -20,5 +20,6 @@ async function testConnection() {
 }
 
 testConnection();
+
 
 
